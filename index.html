@@ -9,13 +9,13 @@
        TROCAR AQUI: título, descrição e meta tags de SEO/social
        ============================================================ -->
   <title>150 Dinâmicas para Destravar as Emoções Infantis</title>
-  <meta name="description" content="150 dinâmicas prontas, organizadas por emoção, pra você nunca mais ouvir um 'sei lá' seguido de silêncio. Material 100% digital, acesso imediato." />
+  <meta name="description" content="150 Dinâmicas para Destravar as Emoções Infantis. Material 100% digital, acesso imediato." />
   <meta name="author" content="150 Dinâmicas" />
   <meta name="robots" content="index, follow" />
 
   <meta property="og:type" content="website" />
   <meta property="og:title" content="150 Dinâmicas para Destravar as Emoções Infantis" />
-  <meta property="og:description" content="Faça qualquer criança falar o que sente — brincando." />
+  <meta property="og:description" content="Faça qualquer criança falar o que sente, brincando." />
   <meta property="og:locale" content="pt_BR" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -232,7 +232,7 @@
     .reveal[data-delay="5"].is-visible { transition-delay: .40s; }
 
     /* ============================================================
-       SEÇÃO 1 — HERO
+       SEÇÃO 1: HERO
        ============================================================ */
     .hero {
       padding: 90px 0 70px;
@@ -283,59 +283,55 @@
       margin-bottom: 34px;
     }
 
-    .hero__mockup {
-      position: relative;
-      max-width: 460px;
+    .hero__inner {
+      max-width: 720px;
       margin: 0 auto;
-      aspect-ratio: 4 / 5;
-      border-radius: var(--radius-xl);
-      background: linear-gradient(135deg, #FFE9B8 0%, #FFD0C2 50%, #C8DBF4 100%);
-      box-shadow: var(--shadow-lg);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
+      text-align: center;
     }
-    .hero__mockup::before {
+    .hero__inner .hero__subtitle {
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .hero__frame {
+      position: relative;
+      width: min(85%, 380px);
+      margin: 8px auto 36px;
+      padding: 10px;
+      border-radius: 30px;
+      background: linear-gradient(135deg, #FFD7B5 0%, #FFE9B8 45%, #C8DBF4 100%);
+      box-shadow: 0 25px 60px rgba(58, 46, 38, 0.18), 0 0 0 1px rgba(58, 46, 38, 0.04);
+      animation: floatY 5.5s ease-in-out infinite;
+      transition: transform .35s ease, box-shadow .35s ease;
+    }
+    .hero__frame::after {
       content: "";
       position: absolute;
-      inset: 22px;
-      border-radius: calc(var(--radius-xl) - 14px);
+      inset: -14px;
+      border-radius: 40px;
+      background: radial-gradient(circle, rgba(247, 206, 71, 0.45) 0%, rgba(247, 206, 71, 0) 70%);
+      filter: blur(22px);
+      opacity: 0.65;
+      z-index: -1;
+      pointer-events: none;
+    }
+    .hero__frame:hover {
+      transform: translateY(-6px) scale(1.015);
+      box-shadow: 0 35px 70px rgba(58, 46, 38, 0.22);
+    }
+    .hero__mockup-img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 22px;
       background: #fff;
-      box-shadow: inset 0 0 0 2px rgba(58,46,38,0.05);
     }
-    .hero__mockup-inner {
-      position: relative;
-      z-index: 2;
-      text-align: center;
-      padding: 36px;
-    }
-    .hero__mockup-inner h3 {
-      font-size: 1.4rem;
-      color: var(--raiva);
-      margin-bottom: 10px;
-    }
-    .hero__mockup-inner p {
-      color: var(--text-soft);
-      font-size: 0.95rem;
-      margin: 0;
-    }
-    .hero__mockup-emoji {
-      font-size: 3.4rem;
-      margin-bottom: 14px;
-      filter: drop-shadow(0 6px 12px rgba(0,0,0,0.08));
-    }
-
-    @media (min-width: 900px) {
-      .hero__grid {
-        grid-template-columns: 1.1fr 1fr;
-        gap: 60px;
-      }
-      .hero__mockup { margin: 0 0 0 auto; }
+    @keyframes floatY {
+      0%, 100% { transform: translateY(0); }
+      50%      { transform: translateY(-14px); }
     }
 
     /* ============================================================
-       SEÇÃO 2 — IDENTIFICAÇÃO + 3 — VIRADA (cards de texto)
+       SEÇÃO 2: VIRADA (cards de texto)
        ============================================================ */
     .narrative {
       max-width: 760px;
@@ -363,7 +359,7 @@
     }
 
     /* ============================================================
-       SEÇÃO 4 — CARDS DE EMOÇÃO
+       SEÇÃO 4: CARDS DE EMOÇÃO
        ============================================================ */
     .emotions {
       display: grid;
@@ -427,7 +423,7 @@
     }
 
     /* ============================================================
-       SEÇÃO 5 — PARA QUEM É
+       SEÇÃO 5: PARA QUEM É
        ============================================================ */
     .audience {
       display: grid;
@@ -486,7 +482,7 @@
     }
 
     /* ============================================================
-       SEÇÃO 6 — O QUE VOCÊ RECEBE
+       SEÇÃO 6: O QUE VOCÊ RECEBE
        ============================================================ */
     .includes {
       max-width: 640px;
@@ -529,7 +525,7 @@
     }
 
     /* ============================================================
-       SEÇÃO 7 — GARANTIA
+       SEÇÃO 7: GARANTIA
        ============================================================ */
     .guarantee {
       max-width: 720px;
@@ -576,7 +572,7 @@
     }
 
     /* ============================================================
-       SEÇÃO 8 — OFERTA / CTA FINAL
+       SEÇÃO 8: OFERTA / CTA FINAL
        ============================================================ */
     .offer {
       background: linear-gradient(160deg, #FFEFC7 0%, #FFD7B5 60%, #FFC4C0 100%);
@@ -640,7 +636,7 @@
     .offer__perks span:first-child::before { content: ""; margin: 0; }
 
     /* ============================================================
-       SEÇÃO 9 — FAQ (acordeão)
+       SEÇÃO 9: FAQ (acordeão)
        ============================================================ */
     .faq {
       max-width: 760px;
@@ -726,9 +722,9 @@
 <body>
 
   <!-- ============================================================
-       SEÇÃO 1 — HERO
+       SEÇÃO 1: HERO
        TROCAR: imagem/mockup do produto dentro de .hero__mockup
-       TROCAR: links de CTA — substituir [LINK_DO_CHECKOUT]
+       TROCAR: links de CTA, substituir [LINK_DO_CHECKOUT]
        ============================================================ -->
   <section class="hero">
     <span class="blob blob--raiva" style="width:280px; height:280px; top:-80px; right:-60px;"></span>
@@ -736,55 +732,38 @@
     <span class="blob blob--tristeza" style="width:120px; height:120px; top:50%; right:42%;"></span>
 
     <div class="container">
-      <div class="hero__grid">
-        <div class="hero__copy">
-          <span class="hero__eyebrow reveal">Material 100% Digital</span>
-          <h1 class="hero__title reveal" data-delay="1">
-            Faça qualquer criança falar o que sente — <em>brincando.</em>
-          </h1>
-          <p class="hero__subtitle reveal" data-delay="2">
-            150 dinâmicas prontas, organizadas por emoção, pra você nunca mais ouvir um "sei lá" seguido de silêncio.
-          </p>
-          <div class="reveal" data-delay="3">
-            <!-- TROCAR: link do checkout abaixo -->
-            <a class="btn" href="[LINK_DO_CHECKOUT]" aria-label="Quero destravar as emoções — acessar checkout">
-              QUERO DESTRAVAR AS EMOÇÕES
-            </a>
-            <small class="btn__sub">Acesso imediato · Material 100% digital</small>
-          </div>
+      <div class="hero__inner">
+        <span class="hero__eyebrow reveal">Material 100% Digital</span>
+        <h1 class="hero__title reveal" data-delay="1">
+          Faça qualquer criança falar o que sente, <em>brincando.</em>
+        </h1>
+        <p class="hero__subtitle reveal" data-delay="2">
+          150 Dinâmicas para Destravar as Emoções Infantis
+        </p>
+
+        <!-- TROCAR: trocar o src se a imagem do mockup for substituída -->
+        <div class="hero__frame reveal" data-delay="3">
+          <img
+            class="hero__mockup-img"
+            src="https://i.postimg.cc/3xhBtSht/Chat-GPT-Image-4-de-jun-de-2026-15-00-45.png"
+            alt="Mockup do produto 150 Dinâmicas para Destravar as Emoções Infantis"
+            loading="eager"
+          />
         </div>
 
-        <!-- TROCAR: substituir o bloco abaixo por <img src="..." alt="..."> do mockup real -->
-        <div class="hero__mockup reveal" data-delay="2" aria-hidden="true">
-          <div class="hero__mockup-inner">
-            <div class="hero__mockup-emoji">🎨</div>
-            <h3>150 Dinâmicas</h3>
-            <p>Para destravar as<br>emoções infantis</p>
-          </div>
+        <div class="reveal" data-delay="4">
+          <!-- TROCAR: link do checkout abaixo -->
+          <a class="btn" href="[LINK_DO_CHECKOUT]" aria-label="Quero destravar as emoções, acessar checkout">
+            QUERO DESTRAVAR AS EMOÇÕES
+          </a>
+          <small class="btn__sub">Acesso imediato · Material 100% digital</small>
         </div>
       </div>
     </div>
   </section>
 
   <!-- ============================================================
-       SEÇÃO 2 — IDENTIFICAÇÃO
-       ============================================================ -->
-  <section class="section section--soft">
-    <span class="blob blob--medo" style="width:200px; height:200px; top:30px; left:-50px;"></span>
-    <span class="blob blob--ansiedade" style="width:140px; height:140px; bottom:-40px; right:8%;"></span>
-
-    <div class="container">
-      <h2 class="section__title reveal">Você já viveu essa cena?</h2>
-      <div class="narrative reveal" data-delay="1">
-        <p>Você pergunta <em>"como você está se sentindo?"</em> e recebe o silêncio. O "sei lá". O olhar pro chão.</p>
-        <p class="narrative__quote">— Não é falta de competência sua, nem birra da criança.</p>
-        <p>É que criança não se abre sendo perguntada. Ela se abre quando está brincando e esquece que está sendo observada.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============================================================
-       SEÇÃO 3 — A VIRADA / SOLUÇÃO
+       SEÇÃO 2: A VIRADA / SOLUÇÃO
        ============================================================ -->
   <section class="section">
     <span class="blob blob--menta" style="width:240px; height:240px; top:-60px; right:-60px;"></span>
@@ -795,14 +774,14 @@
         A solução não é insistir. É <em>traduzir.</em>
       </h2>
       <div class="narrative reveal" data-delay="1">
-        <p>Quando falar do sentimento vira parte de uma brincadeira, o peso some. A criança não sente que está sendo testada — e entrega sozinha o que nenhuma pergunta direta arrancaria.</p>
+        <p>Quando falar do sentimento vira parte de uma brincadeira, o peso some. A criança não sente que está sendo testada, e entrega sozinha o que nenhuma pergunta direta arrancaria.</p>
         <p>Foi pra isso que nasceram as <strong>150 Dinâmicas para Destravar as Emoções Infantis</strong>.</p>
       </div>
     </div>
   </section>
 
   <!-- ============================================================
-       SEÇÃO 4 — O QUE É / COMO FUNCIONA
+       SEÇÃO 4: O QUE É / COMO FUNCIONA
        ============================================================ -->
   <section class="section section--soft">
     <span class="blob blob--tristeza" style="width:180px; height:180px; top:60px; right:-30px;"></span>
@@ -853,7 +832,7 @@
   </section>
 
   <!-- ============================================================
-       SEÇÃO 5 — PARA QUEM É
+       SEÇÃO 5: PARA QUEM É
        ============================================================ -->
   <section class="section">
     <span class="blob blob--alegria" style="width:200px; height:200px; top:-40px; left:-50px;"></span>
@@ -901,7 +880,7 @@
   </section>
 
   <!-- ============================================================
-       SEÇÃO 6 — O QUE VOCÊ RECEBE
+       SEÇÃO 6: O QUE VOCÊ RECEBE
        TROCAR: textos dos bônus quando definidos
        ============================================================ -->
   <section class="section section--soft">
@@ -914,9 +893,9 @@
         <ul>
           <li>As 150 Dinâmicas organizadas por emoção</li>
           <!-- TROCAR: definir bônus 1 -->
-          <li>[BÔNUS 1 — A DEFINIR]</li>
+          <li>[BÔNUS 1 A DEFINIR]</li>
           <!-- TROCAR: definir bônus 2 -->
-          <li>[BÔNUS 2 — A DEFINIR]</li>
+          <li>[BÔNUS 2 A DEFINIR]</li>
           <li>Acesso imediato e vitalício</li>
         </ul>
       </div>
@@ -924,7 +903,7 @@
   </section>
 
   <!-- ============================================================
-       SEÇÃO 7 — GARANTIA
+       SEÇÃO 7: GARANTIA
        TROCAR: número de dias da garantia se mudar (atualmente 7)
        ============================================================ -->
   <section class="section">
@@ -944,7 +923,7 @@
   </section>
 
   <!-- ============================================================
-       SEÇÃO 8 — OFERTA / CTA FINAL
+       SEÇÃO 8: OFERTA / CTA FINAL
        TROCAR: preços "DE" e "POR" e parcelamento
        TROCAR: link de checkout
        ============================================================ -->
@@ -954,7 +933,7 @@
 
     <div class="container">
       <div class="offer__inner reveal">
-        <h2 class="offer__title">Pronta pra nunca mais ficar travada num "sei lá"?</h2>
+        <h2 class="offer__title">Receba agora e comece a aplicar ainda hoje.</h2>
 
         <div class="offer__price">
           <!-- TROCAR: preço cheio -->
@@ -965,7 +944,7 @@
           <span class="offer__price-installment">ou Xx de R$XX</span>
         </div>
 
-        <a class="btn btn--lg" href="https://pay.lowify.com.br/checkout.php?product_id=w1smaP" aria-label="Quero começar agora — acessar checkout">
+        <a class="btn btn--lg" href="https://pay.lowify.com.br/checkout.php?product_id=w1smaP" aria-label="Quero começar agora, acessar checkout">
           QUERO COMEÇAR AGORA
         </a>
 
@@ -979,7 +958,7 @@
   </section>
 
   <!-- ============================================================
-       SEÇÃO 9 — FAQ (acordeão)
+       SEÇÃO 9: FAQ (acordeão)
        ============================================================ -->
   <section class="section section--soft">
     <div class="container">
