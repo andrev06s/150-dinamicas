@@ -22,6 +22,25 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet">
 
+  <!-- Utmify · Pixel -->
+  <script>
+    window.pixelId = "6a21c6eb35e8b97884c0feac";
+    var a = document.createElement("script");
+    a.setAttribute("async", "");
+    a.setAttribute("defer", "");
+    a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+    document.head.appendChild(a);
+  </script>
+
+  <!-- Utmify · UTM tracking -->
+  <script
+    src="https://cdn.utmify.com.br/scripts/utms/latest.js"
+    data-utmify-prevent-xcod-sck
+    data-utmify-prevent-subids
+    async
+    defer
+  ></script>
+
   <style>
     /* ============================================================
        TOKENS DE DESIGN
@@ -946,8 +965,7 @@
           <span class="offer__price-installment">ou Xx de R$XX</span>
         </div>
 
-        <!-- TROCAR: link do checkout abaixo -->
-        <a class="btn btn--lg" href="[LINK_DO_CHECKOUT]" aria-label="Quero começar agora — acessar checkout">
+        <a class="btn btn--lg" href="https://pay.lowify.com.br/checkout.php?product_id=w1smaP" aria-label="Quero começar agora — acessar checkout">
           QUERO COMEÇAR AGORA
         </a>
 
@@ -1034,6 +1052,28 @@
     // ANO DINÂMICO NO FOOTER
     // ============================================================
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    // ============================================================
+    // PASSTHROUGH DE PARÂMETROS DE URL (UTMs, etc.)
+    // Pega tudo que veio em window.location.search e propaga
+    // para todos os links de CTA, preservando params existentes.
+    // ============================================================
+    (function () {
+      var search = window.location.search;
+      if (!search || search.length < 2) return;
+      var incomingParams = search.substring(1); // remove o "?"
+
+      var ctaLinks = document.querySelectorAll('a.btn');
+      ctaLinks.forEach(function (link) {
+        var href = link.getAttribute('href');
+        if (!href) return;
+        // ignora âncoras internas e placeholders não preenchidos
+        if (href.charAt(0) === '#' || href.charAt(0) === '[') return;
+
+        var separator = href.indexOf('?') >= 0 ? '&' : '?';
+        link.setAttribute('href', href + separator + incomingParams);
+      });
+    })();
 
     // ============================================================
     // REVEAL ON SCROLL (Intersection Observer)
