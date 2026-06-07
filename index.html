@@ -485,11 +485,11 @@
        SEÇÃO 6: O QUE VOCÊ RECEBE
        ============================================================ */
     .includes {
-      max-width: 640px;
+      max-width: 580px;
       margin: 0 auto;
       background: #fff;
       border-radius: var(--radius-lg);
-      padding: 40px 32px;
+      padding: 28px 22px;
       box-shadow: var(--shadow-md);
       border-top: 8px solid var(--menta);
     }
@@ -497,22 +497,32 @@
       list-style: none;
       padding: 0;
       margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
     }
     .includes li {
       display: flex;
-      align-items: flex-start;
+      align-items: center;
       gap: 14px;
-      padding: 16px 0;
-      border-bottom: 1px dashed rgba(58,46,38,0.12);
-      font-size: 1.05rem;
+      padding: 16px 18px;
+      border-radius: var(--radius-md);
+      background: var(--bg);
+      font-size: 1rem;
       color: var(--text);
+      font-weight: 600;
+      line-height: 1.35;
+      transition: transform .25s ease, box-shadow .25s ease;
     }
-    .includes li:last-child { border-bottom: 0; }
+    .includes li:hover {
+      transform: translateX(4px);
+      box-shadow: var(--shadow-sm);
+    }
     .includes li::before {
       content: "✓";
       flex-shrink: 0;
-      width: 30px;
-      height: 30px;
+      width: 32px;
+      height: 32px;
       background: var(--menta);
       color: #fff;
       border-radius: 50%;
@@ -521,7 +531,23 @@
       justify-content: center;
       font-weight: 800;
       font-size: 0.95rem;
-      margin-top: 2px;
+    }
+    .includes li.is-bonus {
+      background: linear-gradient(90deg, rgba(247, 206, 71, 0.22), rgba(242, 160, 61, 0.10));
+    }
+    .includes li.is-bonus::before {
+      background: var(--ansiedade);
+    }
+    .includes li.is-bonus strong {
+      color: #B86A18;
+      font-family: var(--font-heading);
+      font-weight: 800;
+      letter-spacing: 0.03em;
+      margin-right: 4px;
+    }
+    @media (min-width: 560px) {
+      .includes { padding: 36px 32px; }
+      .includes li { font-size: 1.05rem; padding: 18px 22px; }
     }
 
     /* ============================================================
@@ -891,8 +917,8 @@
       <div class="includes reveal" data-delay="1">
         <ul>
           <li>As 150 Dinâmicas organizadas por emoção</li>
-          <li><strong>BÔNUS 1 · Kit de Gestão das Emoções:</strong> um conjunto de atividades terapêuticas pensado para pais, psicólogas, professoras e terapeutas que querem desenvolver inteligência emocional em crianças de 2 a 12 anos.</li>
-          <li><strong>BÔNUS 2 · Kit de Controle de Tela:</strong> materiais que auxiliam no controle do tempo de tela das crianças, sem brigas.</li>
+          <li class="is-bonus"><span><strong>BÔNUS 1 ·</strong> Kit de Gestão das Emoções</span></li>
+          <li class="is-bonus"><span><strong>BÔNUS 2 ·</strong> Kit de Controle de Tela</span></li>
           <li>Acesso imediato e vitalício</li>
         </ul>
       </div>
