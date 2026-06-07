@@ -644,6 +644,44 @@
       color: var(--text-soft);
       font-size: 1rem;
     }
+    .offer__delivery {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 18px;
+      margin: 0 auto 22px;
+      background: rgba(111, 194, 160, 0.14);
+      border: 1.5px solid rgba(111, 194, 160, 0.32);
+      border-radius: 999px;
+      font-size: 0.92rem;
+      font-weight: 600;
+      color: var(--text);
+      line-height: 1.3;
+    }
+    .offer__delivery strong {
+      color: #2F8B66;
+      font-family: var(--font-heading);
+      font-weight: 800;
+    }
+    .offer__delivery-icon {
+      flex-shrink: 0;
+      width: 22px; height: 22px;
+      border-radius: 50%;
+      background: var(--menta);
+      color: #fff;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.78rem;
+      font-weight: 800;
+    }
+    @media (max-width: 480px) {
+      .offer__delivery {
+        font-size: 0.84rem;
+        padding: 9px 14px;
+        gap: 8px;
+      }
+    }
     .offer__perks {
       display: flex;
       flex-wrap: wrap;
@@ -945,6 +983,11 @@
           <span class="offer__price-installment">Pagamento único · acesso imediato</span>
         </div>
 
+        <div class="offer__delivery" role="note">
+          <span class="offer__delivery-icon" aria-hidden="true">✓</span>
+          <span>Você recebe na hora no seu <strong>e-mail</strong> e <strong>WhatsApp</strong></span>
+        </div>
+
         <a class="btn btn--lg" href="https://pay.kiwify.com.br/g9B2OvK" aria-label="Quero começar agora, acessar checkout">
           QUERO COMEÇAR AGORA
         </a>
@@ -993,7 +1036,7 @@
           </button>
           <div class="faq-item__a">
             <div class="faq-item__a-inner">
-              É 100% digital. Assim que a compra é confirmada, você recebe o acesso imediato no seu e-mail.
+              É 100% digital. Assim que a compra é confirmada, o acesso chega na hora no seu e-mail e também no seu WhatsApp.
             </div>
           </div>
         </div>
